@@ -1,0 +1,14 @@
+[build]
+target = "armv4t-none-eabi"
+rustflags = [
+      "-Clink-arg=-Tlink.x",
+]
+
+[unstable]
+build-std = ["core"]
+
+[profile.dev]
+panic = 'abort'
+
+[profile.release]
+panic = 'abort'
